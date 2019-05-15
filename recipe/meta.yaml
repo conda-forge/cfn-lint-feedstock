@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "0.20.1" %}
+{% set version = "0.20.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fb1c33e5bf71eaf6320b50e21fee777c0939f96f76dc88487aface525538a1a8
+  sha256: c79fd8487dda4451ffddaf98e239728ea345615d86a01da9e1067e5952ef1052
 
 build:
   noarch: python
@@ -23,11 +23,11 @@ requirements:
   run:
     - python
     - pyyaml
-    - six ~=1.11
+    - six >=1.11,<2
     - requests >=2.15.0
     - aws-sam-translator >=1.10.0
     - jsonpatch
-    - jsonschema ~=2.6
+    - jsonschema >=2.6,<3
     - setuptools
 
 test:
@@ -40,7 +40,7 @@ about:
   home: https://github.com/aws-cloudformation/cfn-python-lint
   license: MIT No Attribution
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  license_file: LICENSE
   summary: 'CloudFormation Linter'
   description: |
     Validate CloudFormation yaml/json templates against the 
