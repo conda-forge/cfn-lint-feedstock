@@ -25,9 +25,9 @@ requirements:
     - pyyaml
     - six >=1.11,<2
     - requests >=2.15.0
-    - aws-sam-translator >=1.10.0
+    - aws-sam-translator >=1.13.0
     - jsonpatch
-    - jsonschema >=2.6,<3
+    - jsonschema >=3,<4
     - setuptools
 
 test:
