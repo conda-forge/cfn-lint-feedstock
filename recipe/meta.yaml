@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "0.23.3" %}
+{% set version = "0.23.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: db5fdd11f93d1b15b5fb9633fecc0456c4ea6755b57f75d15bf7f6958bbf5230
+  sha256: c93c05c382f727c87ff1c6a352bb11f24ad0081ab8f70941710bbf0d1ebaebac
 
 build:
   number: 0
