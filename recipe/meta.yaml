@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "0.23.3" %}
+{% set version = "0.23.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: db5fdd11f93d1b15b5fb9633fecc0456c4ea6755b57f75d15bf7f6958bbf5230
+  sha256: 2384c67de57bb7fdaecc657223786bd3ea62ba1f63e8baf7f87488d8ccbb82aa
 
 build:
   number: 0
@@ -27,7 +27,7 @@ requirements:
     - jsonpatch
     - jsonschema >=3,<4
     - setuptools
-    - pathlib2  # [py2k]
+    - pathlib2 >=2.3.0  # [py2k]
 
 test:
   imports:
