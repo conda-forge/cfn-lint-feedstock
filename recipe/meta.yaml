@@ -24,7 +24,6 @@ requirements:
     - python
     - pyyaml
     - six >=1.11,<2
-    - requests >=2.15.0
     - aws-sam-translator >=1.13.0
     - jsonpatch
     - jsonschema >=3,<4
