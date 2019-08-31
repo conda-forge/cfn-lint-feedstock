@@ -27,7 +27,7 @@ requirements:
     - jsonpatch
     - jsonschema >=3,<4
     - setuptools
-    - pathlib2  # [py2k]
+    - pathlib2 >=2.3.0  # [py2k]
 
 test:
   imports:
