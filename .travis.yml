@@ -1,0 +1,26 @@
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
+
+language: generic
+
+env:
+  global:
+    # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
+    - secure: "CpRnojR+6msWgCBeYC+mUD88lD+YARO3vR4GjDh8kXBqduZkoeffWLzBCiRNMN2MinMtYOLcmaM/1HhERM+PGWhfFsmOWpnvX8a+j9rf3oX/kmcYlVXR+zl9mT6ihPacGRYHHWgMNje3DaVbXh31ywsXzXAxsCD9zdzbvGPDGNXxmBw6VgIKp3EGaZqxljB/6liZbZilFQ9QpfRgHmS4cD39rXkm1CqBcfwui+jVWFLWxSDdl5P+aXkYokUr4H4WP4JBH8SA3UJ0liTQepxjqts2nHmnndz/fHTI/22ifOisJB9q6FRo8xj3NWL75NN51I4Ey79imVqksPvllq0hlZj+cx6sSu/HD53vb4xg4ZA4jQmXF/SLsRo4cn0utFpgYkECaF3Y5rwXVBtg2kVzRN8gPvFW3PdTkiIKrPONjVA3mHjdjUcrO+u0gylBrznapE6mKMJtQGFIXp2DMY/F+Mo6rEfvcvKlbL5kO0gq79DcatPRV/ORIJJSHNG4T3VkyVYP2HvT8ZFAdvjONhxR/g+JToNC6H4X2Jl1wEW703FW4V7tYuWsqSpYruMxrVbHGZSLEez/TzO4Z+g/FHpSVOUK3+NEijPQ+ch72OSeJb3cQeG5b9iW66uuV7RCwCjoRJe4onPWbFbeVdFsKessPTg67soCw9J39O2a2T9OV2I="
+
+matrix:
+  include:
+    - env: CONFIG=linux_ppc64le_python3.6.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+      os: linux
+      arch: ppc64le
+
+    - env: CONFIG=linux_ppc64le_python3.7.____cpython UPLOAD_PACKAGES=True PLATFORM=linux-ppc64le DOCKER_IMAGE=condaforge/linux-anvil-ppc64le
+      os: linux
+      arch: ppc64le
+
+script:
+  - export CI=travis
+  - export GIT_BRANCH="$TRAVIS_BRANCH"
+
+
+  - if [[ ${PLATFORM} =~ .*linux.* ]]; then ./.scripts/run_docker_build.sh; fi
