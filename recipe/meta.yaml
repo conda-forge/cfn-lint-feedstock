@@ -10,7 +10,7 @@ source:
   sha256: 5aa1540ee9a7efc23ebe54a22f1a505766a4bb44f64a0f4fe79574a156a9b43e
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - cfn-lint = cfnlint.__main__:main
