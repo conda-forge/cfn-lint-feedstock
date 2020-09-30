@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true   # [py==30 or py==31 or py==32 or py==33]
+  skip: true   # [py==30 or py==31 or py==32 or py==33 or py=34]
   entry_points:
     - cfn-lint = cfnlint.__main__:main
   script: {{ PYTHON }} -m pip install . -vv
@@ -24,14 +24,14 @@ requirements:
   run:
     - aws-sam-translator >=1.25.0
     - importlib_resources ~=1.4  # [py<37]
-    - jsonpatch  # [py!=34]
+    - jsonpatch
     - jsonschema ~=3.0
     - junit-xml ~=1.9
     - networkx ~=2.4  # [py>=35]
     - pathlib2 >=2.3.0  # [py<=34]
     - pyrsistent <=0.16.0  # [py<35]
     - python
-    - pyyaml <=5.2  # [py==34]
+    - pyyaml
     - six ~=1.11
 
 test:
