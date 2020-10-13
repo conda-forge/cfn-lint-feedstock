@@ -5,9 +5,13 @@ Home: https://github.com/aws-cloudformation/cfn-python-lint
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfn-lint-feedstock/blob/master/LICENSE.txt)
 
 Summary: Checks CloudFormation templates for practices and behaviour that could potentially be improved
+
+Development: https://github.com/aws-cloudformation/cfn-python-lint
+
+Documentation: https://github.com/aws-cloudformation/cfn-python-lint/tree/master/docs
 
 Validate CloudFormation yaml/json templates against the
 CloudFormation spec and additional checks. Includes checking
