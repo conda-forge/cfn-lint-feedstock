@@ -22,7 +22,7 @@ requirements:
     - pip
     - python
   run:
-    - aws-sam-translator >=1.25.0
+    - aws-sam-translator >=1.39.0
     - importlib_resources ~=1.4  # [py<37]
     - jsonpatch
     - jsonschema ~=3.0
