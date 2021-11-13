@@ -11,7 +11,7 @@ source:
   sha256: 82a2cc7d6fa3bbdc303bf1eb87f92ba6b3c552d8aef31918b47b69648ce262d3
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py==30 or py==31 or py==32 or py==33 or py==34]
   entry_points:
     - cfn-lint = cfnlint.__main__:main
