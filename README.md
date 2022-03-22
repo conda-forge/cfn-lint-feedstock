@@ -5,7 +5,7 @@ Home: https://github.com/aws-cloudformation/cfn-python-lint
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfn-lint-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfn-lint-feedstock/blob/main/LICENSE.txt)
 
 Summary: Checks CloudFormation templates for practices and behaviour that could potentially be improved
 
@@ -24,8 +24,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6696&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cfn-lint-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=6696&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/cfn-lint-feedstock?branchName=main">
       </a>
     </td>
   </tr>
