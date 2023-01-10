@@ -11,7 +11,7 @@ source:
   sha256: b6559dd44015947b17f3c0b0d5f38a4bbdadccbb13b6000c96f1a22241f2b69c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cfn-lint = cfnlint.__main__:main
