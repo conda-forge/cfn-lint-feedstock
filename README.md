@@ -1,11 +1,11 @@
-About cfn-lint
-==============
+About cfn-lint-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfn-lint-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/aws-cloudformation/cfn-python-lint
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cfn-lint-feedstock/blob/main/LICENSE.txt)
 
 Summary: Checks CloudFormation templates for practices and behaviour that could potentially be improved
 
