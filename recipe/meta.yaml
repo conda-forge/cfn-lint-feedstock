@@ -23,14 +23,15 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - aws-sam-translator >=1.55.0
+    - aws-sam-translator >=1.62.0
     - jschema-to-python ~=1.2.3
     - jsonpatch
     - jsonschema >=3.0,<5
     - junit-xml ~=1.9
-    - networkx ~=2.4
+    - networkx ~=2.4,<4
     - pyyaml >5.4
     - sarif-om ~=1.0.4
+    - sympy >=1.0.0
 
 test:
   imports:
@@ -59,3 +60,4 @@ extra:
   recipe-maintainers:
     - mariusvniekerk
     - hajapy
+    - jan-janssen
