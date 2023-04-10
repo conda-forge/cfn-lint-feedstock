@@ -32,6 +32,7 @@ requirements:
     - pyyaml >5.4
     - sarif-om ~=1.0.4
     - sympy >=1.0.0
+    - regex
 
 test:
   imports:
