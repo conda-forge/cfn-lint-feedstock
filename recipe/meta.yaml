@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "0.76.2" %}
+{% set version = "0.77.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cfn-lint-{{ version }}.tar.gz
-  sha256: 997be30acb914c19f4df570bd53811dd8f0f3781f6864725bd07c1b5c3144439
+  sha256: a1cf0499a0a17028431d2728cb41fe196e7d4365984a4a42002774ff5c1706c6
 
 build:
   number: 0
@@ -32,6 +32,7 @@ requirements:
     - pyyaml >5.4
     - sarif-om ~=1.0.4
     - sympy >=1.0.0
+    - regex
 
 test:
   imports:
