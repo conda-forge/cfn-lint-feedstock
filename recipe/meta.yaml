@@ -26,7 +26,7 @@ requirements:
     - aws-sam-translator >=1.62.0
     - jschema-to-python ~=1.2.3
     - jsonpatch
-    - jsonschema >=3.0,<5
+    - jsonschema <4.18,>=3.0
     - junit-xml ~=1.9
     - networkx ~=2.4,<4
     - pyyaml >5.4
