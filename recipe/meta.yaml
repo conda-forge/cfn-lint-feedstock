@@ -11,7 +11,7 @@ source:
   sha256: 46118362b2e13b79ba3ae6b3c28b7df5fcd437c06f5bcc3384d13a2defdb7d06
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cfn-lint = cfnlint.__main__:main
@@ -23,7 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - aws-sam-translator >=1.62.0
+    - aws-sam-translator >=1.70.0
     - jschema-to-python ~=1.2.3
     - jsonpatch
     - jsonschema <4.18,>=3.0
