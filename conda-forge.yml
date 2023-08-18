@@ -1,4 +1,6 @@
-bot: {automerge: true}
+bot:
+  automerge: true
+  inspection: update-grayskull
 conda_forge_output_validation: true
 provider: {linux_aarch64: emulated, linux_ppc64le: emulated, win: azure}
 github:
