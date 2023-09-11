@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "0.79.9" %}
+{% set version = "0.79.10" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cfn-lint-{{ version }}.tar.gz
-  sha256: fb8a5fc674ce39469a66d37de19130f4b31fbe4685a19b65ec51c8c8f35e8990
+  sha256: 01eccb77c3e0bb52a91719a468e3713a376395e9444b639bca4dbe1867ebf225
 
 build:
   number: 0
@@ -32,7 +32,7 @@ requirements:
     - jschema-to-python >=1.2.3,<1.3.dev0
     - sarif-om >=1.0.4,<1.1.dev0
     - sympy >=1.0.0
-    - regex
+    - regex >=2021.7.1
 
 test:
   imports:
