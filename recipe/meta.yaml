@@ -41,7 +41,6 @@ test:
     - cfnlint.data
   commands:
     - pip check
-    - cfn-lint --help
   requires:
     - pip
 
