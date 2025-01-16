@@ -11,7 +11,7 @@ source:
   sha256: 8b4f55e283143e99d8d331627637226c291cecfb936606f7aab2d940e71e566d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - cfn-lint = cfnlint.__main__:main
@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - pip
     - setuptools >=65.5.1
   run:
     - typing_extensions
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - pyyaml >5.4
     - aws-sam-translator >=1.94.0
     - jsonpatch
@@ -45,6 +45,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/aws-cloudformation/cfn-python-lint
