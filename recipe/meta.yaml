@@ -1,5 +1,5 @@
 {% set name = "cfn-lint" %}
-{% set version = "1.30.0" %}
+{% set version = "1.31.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 3ca7625e915941b38b44f3329f1d35e8c8a250a157a95e0f5b99c8ce8b17c1b8
+  sha256: 0a1ef7c3ad400fc8530c7785c6597706727ee7d3fc525e541f20d547c86fcd5d
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - typing_extensions
     - python >={{ python_min }},<4.0
     - pyyaml >5.4
-    - aws-sam-translator >=1.94.0
+    - aws-sam-translator >=1.95.0
     - jsonpatch
     - networkx >=2.4,<4
     - sympy >=1.0.0
