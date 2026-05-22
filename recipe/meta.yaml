@@ -14,7 +14,7 @@ build:
   number: 0
   noarch: python
   entry_points:
-    - cfn-lint = cfnlint.__main__:main
+    - cfn-lint = cfnlint.runner:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -42,6 +42,7 @@ test:
     - cfnlint
     - cfnlint.data
   commands:
+    - cfn-lint --help
     - pip check
   requires:
     - pip
