@@ -17,7 +17,6 @@ Validate CloudFormation yaml/json templates against the
 CloudFormation spec and additional checks. Includes checking
 valid values for resource properties and best practices.
 
-
 Current build status
 ====================
 
