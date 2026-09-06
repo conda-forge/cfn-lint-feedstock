@@ -1,0 +1,73 @@
+schema_version: 1
+
+context:
+  name: cfn-lint
+  version: "1.56.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: e3a67b547527a999a5bfa54e5c47920425322cbb625ea2e6447ca51f6fa7173d
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - cfn-lint = cfnlint.runner:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools >=65.5.1
+  run:
+    - typing_extensions
+    - python >=${{ python_min }},<4.0
+    - pyyaml >=6.0.3
+    - aws-sam-translator >=1.111.0
+    - jsonpatch
+    - networkx <4,>=2.4
+    - sympy >=1.14.0
+    - regex
+    - typing-extensions
+    - pydot
+    - junit-xml >=1.9,<2.dev0
+    - jschema-to-python >=1.2.3,<1.3.dev0
+    - sarif-om >=1.0.4,<1.1.dev0
+
+tests:
+  - python:
+      imports:
+        - cfnlint
+        - cfnlint.data
+      pip_check: true
+      python_version: ${{ python_min }}
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - cfn-lint --help
+
+about:
+  summary: Checks CloudFormation templates for practices and behaviour that could potentially be improved
+  license: MIT
+  license_file: LICENSE
+  description: |
+    Validate CloudFormation yaml/json templates against the
+    CloudFormation spec and additional checks. Includes checking
+    valid values for resource properties and best practices.
+  homepage: https://github.com/aws-cloudformation/cfn-python-lint
+  repository: https://github.com/aws-cloudformation/cfn-python-lint
+  documentation: https://github.com/aws-cloudformation/cfn-python-lint/tree/master/docs
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - hajapy
+    - jan-janssen
