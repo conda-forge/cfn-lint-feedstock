@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cfn-lint
-  version: "1.58.0"
+  version: "1.59.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: ba02cd7f7e06c8bc160936051a03ec931af52943fcc9cc72ad2748caa0f2a103
+  sha256: 544e0bf49bcfe49da71aab8b770a50edaffeb4c317f35317a391353565e7187c
 
 build:
   number: 0
